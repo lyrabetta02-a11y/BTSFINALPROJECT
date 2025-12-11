@@ -3,9 +3,11 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function ProjectGallery({ limit }: { limit?: number }) {
   const [filter, setFilter] = useState("All");
+  const { t } = useLanguage();
   
   const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
   
@@ -14,6 +16,12 @@ export default function ProjectGallery({ limit }: { limit?: number }) {
     : projects.filter((p) => p.category === filter);
 
   const displayProjects = limit ? filteredProjects.slice(0, limit) : filteredProjects;
+
+  // Helper to translate categories
+  const getCategoryLabel = (cat: string) => {
+    if (cat === "All") return t("projects.filterAll");
+    return cat; // For now keeping category names as is, or map them if needed
+  };
 
   return (
     <div className="w-full">
@@ -29,7 +37,7 @@ export default function ProjectGallery({ limit }: { limit?: number }) {
                 : "bg-transparent text-gray-500 border-gray-200 hover:border-primary hover:text-primary"
             }`}
           >
-            {cat}
+            {getCategoryLabel(cat)}
           </button>
         ))}
       </div>

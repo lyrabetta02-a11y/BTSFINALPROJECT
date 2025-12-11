@@ -2,13 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import ductingImage from "@assets/generated_images/industrial_hvac_ducting_installation.png";
 import { CheckCircle2 } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function AboutSection() {
+  const { t } = useLanguage();
+
   const highlights = [
-    "Certified HVAC Engineers",
-    "ISO 9001 Compliant Processes",
-    "10+ Years of Experience",
-    "24/7 Emergency Support"
+    t("about.points.certified"),
+    t("about.points.iso"),
+    t("about.points.experience"),
+    t("about.points.support")
   ];
 
   return (
@@ -31,15 +34,15 @@ export default function AboutSection() {
 
           {/* Text Side */}
           <div className="w-full lg:w-1/2">
-            <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">About Us</span>
+            <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">{t("about.badge")}</span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
-              Leading the Way in Climate Control Engineering
+              {t("about.title")}
             </h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              At PT Benua Teknik Solusindo, we combine technical expertise with a commitment to quality. Our mission is to provide energy-efficient and reliable HVAC solutions that create comfortable and productive environments for our clients.
+              {t("about.description1")}
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              From skyscrapers to industrial plants, our team brings precision engineering and luxury service standards to every project we undertake.
+              {t("about.description2")}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
@@ -53,7 +56,7 @@ export default function AboutSection() {
 
             <Link href="/about">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-none h-12 px-8">
-                Learn More About Us
+                {t("about.button")}
               </Button>
             </Link>
           </div>

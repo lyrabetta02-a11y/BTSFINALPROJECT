@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import heroImage from "@assets/generated_images/modern_commercial_building_hvac_system_on_roof.png";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
@@ -28,28 +31,26 @@ export default function Hero() {
         >
           <div className="flex items-center gap-2 mb-6">
             <div className="h-0.5 w-12 bg-accent" />
-            <span className="text-accent font-medium tracking-widest uppercase text-sm">HVAC Contractor Specialist</span>
+            <span className="text-accent font-medium tracking-widest uppercase text-sm">{t("hero.badge")}</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-8">
-            Engineering Comfort <br />
-            <span className="text-white/90">Through Excellence.</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-8 whitespace-pre-line">
+            {t("hero.title")}
           </h1>
           
           <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed">
-            PT Benua Teknik Solusindo delivers premium HVAC solutions for commercial and industrial facilities. 
-            We ensure optimal climate control with efficiency and precision.
+            {t("hero.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/projects">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-white border-none rounded-none px-8 h-14 text-base font-medium">
-                View Our Portfolio
+                {t("hero.portfolioBtn")}
               </Button>
             </Link>
             <Link href="/contact">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-none px-8 h-14 text-base font-medium bg-transparent">
-                Contact Us
+                {t("hero.contactBtn")}
               </Button>
             </Link>
           </div>
@@ -63,7 +64,7 @@ export default function Hero() {
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-white/60 text-xs tracking-widest uppercase">Scroll Down</span>
+        <span className="text-white/60 text-xs tracking-widest uppercase">{t("hero.scrollDown")}</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent" />
       </motion.div>
     </section>

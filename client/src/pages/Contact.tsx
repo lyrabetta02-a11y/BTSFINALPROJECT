@@ -3,7 +3,6 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,6 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -27,6 +27,8 @@ const formSchema = z.object({
 
 export default function Contact() {
   const { toast } = useToast();
+  const { t } = useLanguage();
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -53,9 +55,9 @@ export default function Contact() {
       {/* Page Header */}
       <div className="bg-primary pt-32 pb-16">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">{t("nav.contact")}</h1>
           <p className="text-white/70 max-w-2xl text-lg">
-            Get in touch with our team for consultations, quotes, or emergency support.
+            {t("contact.subtitle")}
           </p>
         </div>
       </div>
@@ -64,8 +66,8 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div>
-            <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">Get In Touch</span>
-            <h2 className="text-3xl font-heading font-bold text-primary mb-8">Contact Information</h2>
+            <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">{t("contact.badge")}</span>
+            <h2 className="text-3xl font-heading font-bold text-primary mb-8">{t("contact.title")}</h2>
             
             <div className="space-y-8">
               <div className="flex items-start gap-4">
@@ -73,7 +75,7 @@ export default function Contact() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-primary text-lg mb-1">Our Office</h3>
+                  <h3 className="font-bold text-primary text-lg mb-1">{t("contact.office")}</h3>
                   <p className="text-gray-600">Jl. HVAC Professional No. 88<br />Jakarta Selatan, Indonesia 12345</p>
                 </div>
               </div>
@@ -83,7 +85,7 @@ export default function Contact() {
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-primary text-lg mb-1">Phone & WhatsApp</h3>
+                  <h3 className="font-bold text-primary text-lg mb-1">{t("contact.phone")}</h3>
                   <p className="text-gray-600">+62 21 555 0123</p>
                   <p className="text-gray-600">+62 812 3456 7890 (WhatsApp)</p>
                 </div>
@@ -94,7 +96,7 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-primary text-lg mb-1">Email</h3>
+                  <h3 className="font-bold text-primary text-lg mb-1">{t("contact.email")}</h3>
                   <p className="text-gray-600">info@benuateknik.co.id</p>
                   <p className="text-gray-600">support@benuateknik.co.id</p>
                 </div>
@@ -105,24 +107,17 @@ export default function Contact() {
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-primary text-lg mb-1">Working Hours</h3>
-                  <p className="text-gray-600">Mon - Fri: 08:00 - 17:00</p>
-                  <p className="text-gray-600">Sat - Sun: Closed (Emergency Only)</p>
+                  <h3 className="font-bold text-primary text-lg mb-1">{t("contact.hours")}</h3>
+                  <p className="text-gray-600">{t("contact.days.weekdays")}: 08:00 - 17:00</p>
+                  <p className="text-gray-600">{t("contact.days.weekend")}: Closed (Emergency Only)</p>
                 </div>
               </div>
-            </div>
-
-            {/* Map Placeholder */}
-            <div className="mt-12 h-64 bg-gray-200 w-full rounded-lg overflow-hidden relative">
-               <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">
-                 Google Maps Embed Placeholder
-               </div>
             </div>
           </div>
 
           {/* Form */}
           <div className="bg-white p-8 shadow-lg border border-gray-100 h-fit">
-            <h3 className="text-2xl font-heading font-bold text-primary mb-6">Send us a Message</h3>
+            <h3 className="text-2xl font-heading font-bold text-primary mb-6">{t("contact.formTitle")}</h3>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
@@ -130,7 +125,7 @@ export default function Contact() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Full Name</FormLabel>
+                      <FormLabel>{t("contact.form.name")}</FormLabel>
                       <FormControl>
                         <Input placeholder="John Doe" {...field} className="h-12 bg-gray-50 border-gray-200 focus:border-primary" />
                       </FormControl>
@@ -143,7 +138,7 @@ export default function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email Address</FormLabel>
+                      <FormLabel>{t("contact.form.email")}</FormLabel>
                       <FormControl>
                         <Input placeholder="john@company.com" {...field} className="h-12 bg-gray-50 border-gray-200 focus:border-primary" />
                       </FormControl>
@@ -156,7 +151,7 @@ export default function Contact() {
                   name="company"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Company (Optional)</FormLabel>
+                      <FormLabel>{t("contact.form.company")}</FormLabel>
                       <FormControl>
                         <Input placeholder="Company Name" {...field} className="h-12 bg-gray-50 border-gray-200 focus:border-primary" />
                       </FormControl>
@@ -169,7 +164,7 @@ export default function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>{t("contact.form.message")}</FormLabel>
                       <FormControl>
                         <Textarea placeholder="How can we help you?" className="min-h-[150px] bg-gray-50 border-gray-200 focus:border-primary resize-none" {...field} />
                       </FormControl>
@@ -178,7 +173,7 @@ export default function Contact() {
                   )}
                 />
                 <Button type="submit" className="w-full h-12 bg-primary hover:bg-primary/90 text-white font-medium text-lg rounded-none">
-                  Send Message
+                  {t("contact.form.submit")}
                 </Button>
               </form>
             </Form>

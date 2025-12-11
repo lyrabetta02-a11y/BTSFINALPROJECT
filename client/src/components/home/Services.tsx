@@ -1,7 +1,7 @@
-import { services } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wrench, Wind, ShieldCheck, Ruler } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const iconMap = {
   Wrench: Wrench,
@@ -11,14 +11,39 @@ const iconMap = {
 };
 
 export default function Services() {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      title: t("services.items.installation.title"),
+      description: t("services.items.installation.desc"),
+      icon: "Wrench"
+    },
+    {
+      title: t("services.items.ducting.title"),
+      description: t("services.items.ducting.desc"),
+      icon: "Wind"
+    },
+    {
+      title: t("services.items.maintenance.title"),
+      description: t("services.items.maintenance.desc"),
+      icon: "ShieldCheck"
+    },
+    {
+      title: t("services.items.design.title"),
+      description: t("services.items.design.desc"),
+      icon: "Ruler"
+    }
+  ];
+
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">Our Expertise</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Comprehensive HVAC Solutions</h2>
+          <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">{t("services.badge")}</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">{t("services.title")}</h2>
           <p className="text-gray-600 leading-relaxed">
-            We provide end-to-end services from initial design to installation and long-term maintenance, ensuring your facility operates at peak performance.
+            {t("services.description")}
           </p>
         </div>
 

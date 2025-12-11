@@ -1,8 +1,11 @@
 import { Link } from "wouter";
 import logoImage from "@assets/generated_images/logo_for_pt_benua_teknik_solusindo.png";
 import { MapPin, Phone, Mail, Instagram, Linkedin, Facebook } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-6">
@@ -17,7 +20,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
-              Professional HVAC contractor providing world-class installation, maintenance, and design solutions for commercial and industrial clients.
+              {t("footer.description")}
             </p>
             <div className="flex gap-4">
               <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-accent transition-colors">
@@ -34,31 +37,31 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-6">Quick Links</h4>
+            <h4 className="font-heading font-semibold text-lg mb-6">{t("footer.quickLinks")}</h4>
             <ul className="space-y-3">
-              <li><Link href="/"><a className="text-white/70 hover:text-accent transition-colors text-sm">Home</a></Link></li>
-              <li><Link href="/about"><a className="text-white/70 hover:text-accent transition-colors text-sm">About Us</a></Link></li>
-              <li><Link href="/services"><a className="text-white/70 hover:text-accent transition-colors text-sm">Services</a></Link></li>
-              <li><Link href="/projects"><a className="text-white/70 hover:text-accent transition-colors text-sm">Projects</a></Link></li>
-              <li><Link href="/contact"><a className="text-white/70 hover:text-accent transition-colors text-sm">Contact</a></Link></li>
+              <li><Link href="/" className="text-white/70 hover:text-accent transition-colors text-sm">{t("nav.home")}</Link></li>
+              <li><Link href="/about" className="text-white/70 hover:text-accent transition-colors text-sm">{t("nav.about")}</Link></li>
+              <li><Link href="/services" className="text-white/70 hover:text-accent transition-colors text-sm">{t("nav.services")}</Link></li>
+              <li><Link href="/projects" className="text-white/70 hover:text-accent transition-colors text-sm">{t("nav.projects")}</Link></li>
+              <li><Link href="/contact" className="text-white/70 hover:text-accent transition-colors text-sm">{t("nav.contact")}</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-6">Our Services</h4>
+            <h4 className="font-heading font-semibold text-lg mb-6">{t("footer.ourServices")}</h4>
             <ul className="space-y-3">
-              <li className="text-white/70 text-sm">HVAC Installation</li>
-              <li className="text-white/70 text-sm">Chiller Systems</li>
-              <li className="text-white/70 text-sm">VRV / VRF Systems</li>
-              <li className="text-white/70 text-sm">Ducting Fabrication</li>
-              <li className="text-white/70 text-sm">Preventive Maintenance</li>
+              <li className="text-white/70 text-sm">{t("services.items.installation.title")}</li>
+              <li className="text-white/70 text-sm">{t("projects.categories.chiller")}</li>
+              <li className="text-white/70 text-sm">{t("projects.categories.vrv")}</li>
+              <li className="text-white/70 text-sm">{t("projects.categories.ducting")}</li>
+              <li className="text-white/70 text-sm">{t("projects.categories.maintenance")}</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-6">Contact Us</h4>
+            <h4 className="font-heading font-semibold text-lg mb-6">{t("footer.contactUs")}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
@@ -79,10 +82,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/50 text-xs">© 2025 PT Benua Teknik Solusindo. All rights reserved.</p>
+          <p className="text-white/50 text-xs">{t("footer.rights")}</p>
           <div className="flex gap-6">
-            <span className="text-white/50 text-xs cursor-pointer hover:text-white">Privacy Policy</span>
-            <span className="text-white/50 text-xs cursor-pointer hover:text-white">Terms of Service</span>
+            <span className="text-white/50 text-xs cursor-pointer hover:text-white">{t("footer.privacy")}</span>
+            <span className="text-white/50 text-xs cursor-pointer hover:text-white">{t("footer.terms")}</span>
           </div>
         </div>
       </div>

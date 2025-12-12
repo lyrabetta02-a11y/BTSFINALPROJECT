@@ -28,7 +28,7 @@ const formSchema = z.object({
 export default function Contact() {
   const { toast } = useToast();
   const { t } = useLanguage();
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -55,7 +55,9 @@ export default function Contact() {
       {/* Page Header */}
       <div className="bg-primary pt-32 pb-16">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">{t("nav.contact")}</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
+            {t("nav.contact")}
+          </h1>
           <p className="text-white/70 max-w-2xl text-lg">
             {t("contact.subtitle")}
           </p>
@@ -66,17 +68,27 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div>
-            <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">{t("contact.badge")}</span>
-            <h2 className="text-3xl font-heading font-bold text-primary mb-8">{t("contact.title")}</h2>
-            
+            <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">
+              {t("contact.badge")}
+            </span>
+            <h2 className="text-3xl font-heading font-bold text-primary mb-8">
+              {t("contact.title")}
+            </h2>
+
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-primary/5 rounded-lg flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-primary text-lg mb-1">{t("contact.office")}</h3>
-                  <p className="text-gray-600">Jl. HVAC Professional No. 88<br />Jakarta Selatan, Indonesia 12345</p>
+                  <h3 className="font-bold text-primary text-lg mb-1">
+                    {t("contact.office")}
+                  </h3>
+                  <p className="text-gray-600">
+                    Jl. Melati Raya, Gunung Sindur
+                    <br />
+                    Bogor, Indonesia
+                  </p>
                 </div>
               </div>
 
@@ -85,7 +97,9 @@ export default function Contact() {
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-primary text-lg mb-1">{t("contact.phone")}</h3>
+                  <h3 className="font-bold text-primary text-lg mb-1">
+                    {t("contact.phone")}
+                  </h3>
                   <p className="text-gray-600">+62 21 555 0123</p>
                   <p className="text-gray-600">+62 812 3456 7890 (WhatsApp)</p>
                 </div>
@@ -96,7 +110,9 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-primary text-lg mb-1">{t("contact.email")}</h3>
+                  <h3 className="font-bold text-primary text-lg mb-1">
+                    {t("contact.email")}
+                  </h3>
                   <p className="text-gray-600">info@benuateknik.co.id</p>
                   <p className="text-gray-600">support@benuateknik.co.id</p>
                 </div>
@@ -107,9 +123,15 @@ export default function Contact() {
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-primary text-lg mb-1">{t("contact.hours")}</h3>
-                  <p className="text-gray-600">{t("contact.days.weekdays")}: 08:00 - 17:00</p>
-                  <p className="text-gray-600">{t("contact.days.weekend")}: Closed (Emergency Only)</p>
+                  <h3 className="font-bold text-primary text-lg mb-1">
+                    {t("contact.hours")}
+                  </h3>
+                  <p className="text-gray-600">
+                    {t("contact.days.weekdays")}: 08:00 - 17:00
+                  </p>
+                  <p className="text-gray-600">
+                    {t("contact.days.weekend")}: Closed (Emergency Only)
+                  </p>
                 </div>
               </div>
             </div>
@@ -117,9 +139,14 @@ export default function Contact() {
 
           {/* Form */}
           <div className="bg-white p-8 shadow-lg border border-gray-100 h-fit">
-            <h3 className="text-2xl font-heading font-bold text-primary mb-6">{t("contact.formTitle")}</h3>
+            <h3 className="text-2xl font-heading font-bold text-primary mb-6">
+              {t("contact.formTitle")}
+            </h3>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
                 <FormField
                   control={form.control}
                   name="name"
@@ -127,7 +154,11 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>{t("contact.form.name")}</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} className="h-12 bg-gray-50 border-gray-200 focus:border-primary" />
+                        <Input
+                          placeholder="John Doe"
+                          {...field}
+                          className="h-12 bg-gray-50 border-gray-200 focus:border-primary"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -140,7 +171,11 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>{t("contact.form.email")}</FormLabel>
                       <FormControl>
-                        <Input placeholder="john@company.com" {...field} className="h-12 bg-gray-50 border-gray-200 focus:border-primary" />
+                        <Input
+                          placeholder="john@company.com"
+                          {...field}
+                          className="h-12 bg-gray-50 border-gray-200 focus:border-primary"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -153,7 +188,11 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>{t("contact.form.company")}</FormLabel>
                       <FormControl>
-                        <Input placeholder="Company Name" {...field} className="h-12 bg-gray-50 border-gray-200 focus:border-primary" />
+                        <Input
+                          placeholder="Company Name"
+                          {...field}
+                          className="h-12 bg-gray-50 border-gray-200 focus:border-primary"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -166,13 +205,20 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>{t("contact.form.message")}</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="How can we help you?" className="min-h-[150px] bg-gray-50 border-gray-200 focus:border-primary resize-none" {...field} />
+                        <Textarea
+                          placeholder="How can we help you?"
+                          className="min-h-[150px] bg-gray-50 border-gray-200 focus:border-primary resize-none"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full h-12 bg-primary hover:bg-primary/90 text-white font-medium text-lg rounded-none">
+                <Button
+                  type="submit"
+                  className="w-full h-12 bg-primary hover:bg-primary/90 text-white font-medium text-lg rounded-none"
+                >
                   {t("contact.form.submit")}
                 </Button>
               </form>

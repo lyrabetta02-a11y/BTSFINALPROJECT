@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoImage from "@assets/generated_images/logo_for_pt_benua_teknik_solusindo.png";
+import logoImage from "@assets/generated_images/PT_Benua_Teknik_Solusindo_1765445450532.png";
 import {
   MapPin,
   Phone,

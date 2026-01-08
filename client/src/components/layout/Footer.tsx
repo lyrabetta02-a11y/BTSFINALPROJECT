@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoImage from "@assets/PT_Benua_Teknik_Solusindo_1765445450532.png";
+import logoImage from "@assets/generated_images/PT_Benua_Teknik_Solusindo_1765445450532.png";
 import { MapPin, Phone, Mail, Instagram, Linkedin, Facebook } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 

@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoImage from "@assets/PT_Benua_Teknik_Solusindo_1765445450532.png";
+import logoImage from "@assets/generated_images/PT_Benua_Teknik_Solusindo_1765445450532.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -10,8 +10,9 @@ import heroImage from "@assets/generated_images/modern_commercial_building_hvac_
 import ductingImage from "@assets/generated_images/industrial_hvac_ducting_installation.png";
 import vrvImage from "@assets/generated_images/vrv_vrf_outdoor_ac_units.png";
 import chillerImage from "@assets/generated_images/industrial_chiller_system.png";
-import klhkImage1 from "@assets/generated_images/modern_commercial_building_hvac_system_on_roof.png"; // Placeholder for KLHK 1
-import klhkImage2 from "@assets/generated_images/industrial_hvac_ducting_installation.png"; // Placeholder for KLHK 2
+import klhkImage1 from "@assets/generated_images/IMG-20250312-WA0003.jpg";
+import klhkImage2 from "@assets/generated_images/IMG-20250312-WA0004.jpg";
+import klhkImage3 from "@assets/generated_images/IMG-20250312-WA0011.jpg";
 
 export const projects = [
   {
@@ -25,30 +26,30 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Industrial Factory Ventilation",
-    category: "Ducting",
-    image: ductingImage,
-    location: "Cikarang",
-    year: "2023",
-    description: "Large-scale industrial ducting and exhaust system for a manufacturing plant."
+    title: "KLHK - Phase II",
+    category: "HVAC System",
+    image: klhkImage2,
+    location: "Jakarta",
+    year: "2024",
+    description: "Lanjutan proyek sistem HVAC di gedung KLHK dengan fokus pada optimalisasi efisiensi energi."
   },
   {
     id: 3,
+    title: "KLHK - Maintenance",
+    category: "Maintenance",
+    image: klhkImage3,
+    location: "Jakarta",
+    year: "2024",
+    description: "Pemeliharaan rutin dan servis berkala untuk memastikan sistem HVAC KLHK tetap prima."
+  },
+  {
+    id: 4,
     title: "Luxury Mall VRV System",
     category: "VRV/VRF",
     image: vrvImage,
     location: "Surabaya",
     year: "2023",
     description: "High-efficiency VRV system installation for a premium shopping center."
-  },
-  {
-    id: 4,
-    title: "Hospital Air Filtration",
-    category: "Maintenance",
-    image: heroImage,
-    location: "Bandung",
-    year: "2024",
-    description: "HEPA filtration upgrade and maintenance for critical hospital wings."
   },
   {
     id: 5,

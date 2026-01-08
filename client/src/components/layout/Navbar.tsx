@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoImage from "@assets/generated_images/PT_Benua_Teknik_Solusindo_1765445450532.png";
+import logoImage from "@assets/PT_Benua_Teknik_Solusindo_1765445450532.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,29 +36,17 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
-          : "bg-transparent py-6"
+        scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <div className="flex items-center gap-3 cursor-pointer">
-            <img
-              src={logoImage}
-              alt="Benua Teknik"
-              className="h-10 w-10 object-contain"
-            />
-            <div
-              className={`flex flex-col ${scrolled ? "text-primary" : "text-white"}`}
-            >
-              <span className="font-heading font-bold text-lg leading-tight tracking-wide">
-                BENUA TEKNIK
-              </span>
-              <span className="text-[10px] tracking-widest uppercase opacity-80">
-                Solusindo
-              </span>
+            <img src={logoImage} alt="Benua Teknik Solusindo" className="h-16 w-auto object-contain" />
+            <div className={`flex flex-col ${scrolled ? "text-primary" : "text-white"}`}>
+              <span className="font-heading font-bold text-lg leading-tight tracking-wide">BENUA TEKNIK</span>
+              <span className="text-[10px] tracking-widest uppercase opacity-80">Solusindo</span>
             </div>
           </div>
         </Link>
@@ -66,29 +54,29 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
+            <Link 
+              key={link.href} 
               href={link.href}
               className={`text-sm font-medium transition-colors hover:text-accent ${
                 location === link.href
                   ? "text-accent"
                   : scrolled
-                    ? "text-foreground"
-                    : "text-white/90"
+                  ? "text-foreground"
+                  : "text-white/90"
               }`}
             >
               {link.name}
             </Link>
           ))}
-
+          
           <div className="h-6 w-px bg-current opacity-20 mx-2" />
 
           {/* Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
+              <Button 
+                variant="ghost" 
+                size="sm" 
                 className={`h-8 w-8 p-0 rounded-full ${scrolled ? "text-foreground hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
               >
                 <Globe className="h-4 w-4" />
@@ -96,20 +84,10 @@ export default function Navbar() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem
-                onClick={() => setLanguage("en")}
-                className={
-                  language === "en" ? "bg-accent/10 text-accent font-bold" : ""
-                }
-              >
+              <DropdownMenuItem onClick={() => setLanguage("en")} className={language === "en" ? "bg-accent/10 text-accent font-bold" : ""}>
                 🇬🇧 English
               </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => setLanguage("id")}
-                className={
-                  language === "id" ? "bg-accent/10 text-accent font-bold" : ""
-                }
-              >
+              <DropdownMenuItem onClick={() => setLanguage("id")} className={language === "id" ? "bg-accent/10 text-accent font-bold" : ""}>
                 🇮🇩 Indonesia
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -129,25 +107,19 @@ export default function Navbar() {
           {/* Mobile Lang Switch */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
+              <Button 
+                variant="ghost" 
+                size="sm" 
                 className={`h-8 w-8 p-0 rounded-full ${scrolled ? "text-foreground hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
               >
                 <Globe className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem
-                onClick={() => setLanguage("en")}
-                className={language === "en" ? "bg-accent/10 text-accent" : ""}
-              >
+              <DropdownMenuItem onClick={() => setLanguage("en")} className={language === "en" ? "bg-accent/10 text-accent" : ""}>
                 🇬🇧 EN
               </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => setLanguage("id")}
-                className={language === "id" ? "bg-accent/10 text-accent" : ""}
-              >
+              <DropdownMenuItem onClick={() => setLanguage("id")} className={language === "id" ? "bg-accent/10 text-accent" : ""}>
                 🇮🇩 ID
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -166,8 +138,8 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-6 flex flex-col gap-4 animate-in slide-in-from-top-5">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
+            <Link 
+              key={link.href} 
               href={link.href}
               className={`text-base font-medium py-2 border-b border-gray-100 ${
                 location === link.href ? "text-primary" : "text-gray-600"
@@ -177,9 +149,7 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Button className="w-full bg-primary text-white mt-2">
-            {t("nav.contactUs")}
-          </Button>
+          <Button className="w-full bg-primary text-white mt-2">{t("nav.contactUs")}</Button>
         </div>
       )}
     </nav>

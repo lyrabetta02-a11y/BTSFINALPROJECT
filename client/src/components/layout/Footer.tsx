@@ -23,7 +23,7 @@ export default function Footer() {
               {t("footer.description")}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-accent transition-colors">
+              <a href="https://www.instagram.com/benuateknik.official?igsh=b2NzY3V2NzU3cDB6" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-accent transition-colors">
                 <Instagram className="w-4 h-4" />
               </a>
               <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-accent transition-colors">
@@ -66,7 +66,9 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <span className="text-white/70 text-sm">
-                  Jl. HVAC Professional No. 88, Jakarta Selatan, Indonesia 12345
+                  Jl. Melati Raya, Gunung Sindur
+                  <br />
+                  Bogor, Indonesia
                 </span>
               </li>
               <li className="flex items-center gap-3">

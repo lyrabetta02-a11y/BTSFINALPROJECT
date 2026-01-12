@@ -39,13 +39,38 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent",
-      description: "We'll get back to you as soon as possible.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent",
+          description: "We'll get back to you as soon as possible.",
+        });
+        form.reset();
+      } else {
+        const error = await response.json();
+        toast({
+          title: "Error",
+          description: error.error || "Failed to send message. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Submit error:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
@@ -113,7 +138,7 @@ export default function Contact() {
                     {t("contact.email")}
                   </h3>
                   <p className="text-gray-600">benuatekniksolusindo@gmail.com</p>
-                  <p className="text-gray-600">support@benuateknik.co.id</p>
+                  <p className="text-gray-600"></p>
                 </div>
               </div>
 

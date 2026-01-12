@@ -121,7 +121,16 @@ export default function Contact() {
                   <h3 className="font-bold text-primary text-lg mb-1">
                     {t("contact.phone")}
                   </h3>
-                  <p className="text-gray-600">+62 821-3082-0228 (WhatsApp)</p>
+                  <p className="text-gray-600">
+                    <a 
+                      href="https://wa.me/6282130820228" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      +62 821-3082-0228 (WhatsApp)
+                    </a>
+                  </p>
                 </div>
               </div>
 

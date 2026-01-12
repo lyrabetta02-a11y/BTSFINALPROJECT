@@ -100,8 +100,7 @@ export default function Contact() {
                   <h3 className="font-bold text-primary text-lg mb-1">
                     {t("contact.phone")}
                   </h3>
-                  <p className="text-gray-600">+62 21 555 0123</p>
-                  <p className="text-gray-600">+62 812 3456 7890 (WhatsApp)</p>
+                  <p className="text-gray-600">+62 821-3082-0228 (WhatsApp)</p>
                 </div>
               </div>
 
@@ -113,7 +112,7 @@ export default function Contact() {
                   <h3 className="font-bold text-primary text-lg mb-1">
                     {t("contact.email")}
                   </h3>
-                  <p className="text-gray-600">info@benuateknik.co.id</p>
+                  <p className="text-gray-600">benuatekniksolusindo@gmail.com</p>
                   <p className="text-gray-600">support@benuateknik.co.id</p>
                 </div>
               </div>

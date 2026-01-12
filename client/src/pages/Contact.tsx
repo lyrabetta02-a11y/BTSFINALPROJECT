@@ -43,8 +43,8 @@ export default function Contact() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       await emailjs.send(
-        'service_03faf62',
-        'template_yg7bpjd',
+        'service_emqujgb',
+        'template_kiir5ws',
         {
           from_name: values.name,
           from_email: values.email,

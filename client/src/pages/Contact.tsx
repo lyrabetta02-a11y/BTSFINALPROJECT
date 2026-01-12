@@ -42,10 +42,9 @@ export default function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // Replace with your EmailJS service ID, template ID, and public key
       await emailjs.send(
-        'your_service_id', // e.g., 'service_abc123'
-        'your_template_id', // e.g., 'template_xyz789'
+        'service_03faf62',
+        'template_yg7bpjd',
         {
           from_name: values.name,
           from_email: values.email,
@@ -53,7 +52,7 @@ export default function Contact() {
           message: values.message,
           to_email: 'benuatekniksolusindo@gmail.com',
         },
-        'your_public_key' // e.g., 'abc123def456'
+        '9iRqri9Ck6Rop8_Hi'
       );
 
       toast({

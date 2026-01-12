@@ -93,13 +93,19 @@ export default function Navbar() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Button
-            size="sm"
-            className="bg-accent hover:bg-accent/90 text-white border-none font-medium ml-2"
+          <a
+            href="https://wa.me/6282130820228"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Phone className="w-4 h-4 mr-2" />
-            {t("nav.whatsapp")}
-          </Button>
+            <Button
+              size="sm"
+              className="bg-accent hover:bg-accent/90 text-white border-none font-medium ml-2"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              {t("nav.whatsapp")}
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}

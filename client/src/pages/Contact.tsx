@@ -50,7 +50,6 @@ export default function Contact() {
           from_email: values.email,
           company: values.company,
           message: values.message,
-          to_email: 'benuatekniksolusindo@gmail.com',
         },
         '9iRqri9Ck6Rop8_Hi'
       );

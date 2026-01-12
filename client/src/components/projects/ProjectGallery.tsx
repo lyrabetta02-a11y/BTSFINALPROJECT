@@ -2,11 +2,13 @@ import { projects } from "@/lib/data";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Plus } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function ProjectGallery({ limit }: { limit?: number }) {
   const [filter, setFilter] = useState("All");
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const { t } = useLanguage();
   
   const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
@@ -21,6 +23,14 @@ export default function ProjectGallery({ limit }: { limit?: number }) {
   const getCategoryLabel = (cat: string) => {
     if (cat === "All") return t("projects.filterAll");
     return cat; // For now keeping category names as is, or map them if needed
+  };
+
+  const openGallery = (project: typeof projects[0]) => {
+    setSelectedProject(project);
+  };
+
+  const closeGallery = () => {
+    setSelectedProject(null);
   };
 
   return (
@@ -72,18 +82,57 @@ export default function ProjectGallery({ limit }: { limit?: number }) {
                 <p className="text-white/80 text-sm mb-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-200">
                   {project.location}
                 </p>
-                <Button 
-                  size="icon" 
-                  variant="outline" 
-                  className="rounded-full border-white text-white hover:bg-white hover:text-primary translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-250"
-                >
-                  <Plus className="w-5 h-5" />
-                </Button>
+                {project.gallery && project.gallery.length > 1 && (
+                  <Button 
+                    size="icon" 
+                    variant="outline" 
+                    onClick={() => openGallery(project)}
+                    className="rounded-full border-white text-white hover:bg-white hover:text-primary translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-250"
+                  >
+                    <Plus className="w-5 h-5" />
+                  </Button>
+                )}
               </div>
             </motion.div>
           ))}
         </AnimatePresence>
       </motion.div>
+
+      {/* Gallery Modal */}
+      <Dialog open={!!selectedProject} onOpenChange={closeGallery}>
+        <DialogContent className="max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>{selectedProject?.title}</DialogTitle>
+            <p className="text-sm text-gray-600">{selectedProject?.description}</p>
+          </DialogHeader>
+          {selectedProject && selectedProject.gallery && (
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <AnimatePresence>
+                {selectedProject.gallery.map((image, index) => (
+                  <motion.div 
+                    key={index} 
+                    className="aspect-square overflow-hidden rounded-lg"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    <img
+                      src={image}
+                      alt={`${selectedProject.title} ${index + 1}`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

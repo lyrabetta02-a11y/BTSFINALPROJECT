@@ -11,13 +11,34 @@ import chillerImage from "@assets/generated_images/industrial_chiller_system.png
 import klhkImage1 from "@assets/generated_images/IMG-20250312-WA0003.jpg";
 import klhkImage2 from "@assets/generated_images/IMG-20250312-WA0004.jpg";
 import klhkImage3 from "@assets/generated_images/IMG-20250312-WA0011.jpg";
+import grandInna from "@assets/generated_images/grand inna.jpeg";
+import nf1 from "@assets/generated_images/nf 1.jpg";
+import nf2 from "@assets/generated_images/nf 2.jpg";
+import nf3 from "@assets/generated_images/nf 3.jpg";
+import nf4 from "@assets/generated_images/nf 4.jpg";
+import nf5 from "@assets/generated_images/nf 5.jpg";
+import nf6 from "@assets/generated_images/nf 6.jpg";
+import nf7 from "@assets/generated_images/nf 7.jpg";
+import nf8 from "@assets/generated_images/nf 8.jpg";
+import nf9 from "@assets/generated_images/nf 9.jpg";
+import nf10 from "@assets/generated_images/nf 10.jpg";
+import nf11 from "@assets/generated_images/nf 11.jpg";
+import nf12 from "@assets/generated_images/nf 12.jpg";
+import nf13 from "@assets/generated_images/nf 13.jpg";
+import nf14 from "@assets/generated_images/nf 14.jpg";
+import nf15 from "@assets/generated_images/nf 15.jpg";
+import nf16 from "@assets/generated_images/nf 16.jpg";
+import nf17 from "@assets/generated_images/nf 17.jpg";
+import nf18 from "@assets/generated_images/nf 18.jpg";
+import nf19 from "@assets/generated_images/nf 19.jpg";
 
 export const projects = [
   {
     id: 1,
     title: "CHILLER",
-    category: "HVAC System",
+    category: "Chiller",
     image: klhkImage1,
+    gallery: [klhkImage1, klhkImage2, klhkImage3, grandInna],
     location: "Jakarta",
     year: "2024",
     description:
@@ -28,6 +49,7 @@ export const projects = [
     title: "KLHK - Maintenance",
     category: "Maintenance",
     image: klhkImage3,
+    gallery: [klhkImage3, klhkImage1],
     location: "Jakarta",
     year: "2024",
     description:
@@ -38,6 +60,7 @@ export const projects = [
     title: "Luxury Mall VRV System",
     category: "VRV/VRF",
     image: vrvImage,
+    gallery: [vrvImage],
     location: "Surabaya",
     year: "2023",
     description:
@@ -48,6 +71,7 @@ export const projects = [
     title: "Data Center Cooling",
     category: "Chiller",
     image: chillerImage,
+    gallery: [chillerImage],
     location: "Jakarta",
     year: "2024",
     description:
@@ -58,10 +82,22 @@ export const projects = [
     title: "Hotel Resort HVAC",
     category: "VRV/VRF",
     image: vrvImage,
+    gallery: [vrvImage],
     location: "Bali",
     year: "2022",
     description:
       "Integrated climate control system for a luxury beachside resort.",
+  },
+  {
+    id: 6,
+    title: "PT NATURINDO FRESH",
+    category: "HVAC System",
+    image: nf1,
+    gallery: [nf1, nf2, nf3, nf4, nf5, nf6, nf7, nf8, nf9, nf10, nf11, nf12, nf13, nf14, nf15, nf16, nf17, nf18, nf19],
+    location: "Jakarta",
+    year: "2024",
+    description:
+      "Pemasangan sistem HVAC untuk PT Naturindo Fresh.",
   },
 ];
 

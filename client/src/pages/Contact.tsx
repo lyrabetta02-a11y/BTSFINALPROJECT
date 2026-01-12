@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/lib/LanguageContext";
+import emailjs from '@emailjs/browser';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -41,30 +42,27 @@ export default function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      // Replace with your EmailJS service ID, template ID, and public key
+      await emailjs.send(
+        'your_service_id', // e.g., 'service_abc123'
+        'your_template_id', // e.g., 'template_xyz789'
+        {
+          from_name: values.name,
+          from_email: values.email,
+          company: values.company,
+          message: values.message,
+          to_email: 'benuatekniksolusindo@gmail.com',
         },
-        body: JSON.stringify(values),
-      });
+        'your_public_key' // e.g., 'abc123def456'
+      );
 
-      if (response.ok) {
-        toast({
-          title: "Message Sent",
-          description: "We'll get back to you as soon as possible.",
-        });
-        form.reset();
-      } else {
-        const error = await response.json();
-        toast({
-          title: "Error",
-          description: error.error || "Failed to send message. Please try again.",
-          variant: "destructive",
-        });
-      }
+      toast({
+        title: "Message Sent",
+        description: "We'll get back to you as soon as possible.",
+      });
+      form.reset();
     } catch (error) {
-      console.error("Submit error:", error);
+      console.error("Email send error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",

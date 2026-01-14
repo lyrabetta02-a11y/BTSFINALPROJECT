@@ -175,7 +175,7 @@ export const products: Product[] = [
     // image: flangeImage, // Uncomment and add import when image is uploaded
     shopeeLink: "", // Add Shopee link here (e.g., "https://shopee.co.id/flange-pvc-dn40-i.123456.7890123")
     tokopediaLink: "", // Add Tokopedia link here (e.g., "https://www.tokopedia.com/store/flange-pvc-dn40")
-    lazadaLink: "https://www.lazada.co.id/products/rucika-flange-aw-2-inch-i7263316147.html", // Link Lazada untuk uji coba
+    lazadaLink: "https://www.lazada.co.id/products/rucika-flange-aw-2-inch-i7263316147.html", // Link Lazada untuk uji coba - updated
     price: "Rp 50.000",
   },
   {

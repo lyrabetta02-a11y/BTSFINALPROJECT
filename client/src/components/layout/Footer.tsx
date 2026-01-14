@@ -84,7 +84,12 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
-                <span className="text-white/70 text-sm">info@benuateknik.co.id</span>
+                <a 
+                  href="mailto:benuatekniksolusindo@gmail.com" 
+                  className="text-white/70 hover:text-accent transition-colors text-sm"
+                >
+                  benuatekniksolusindo@gmail.com
+                </a>
               </li>
             </ul>
           </div>

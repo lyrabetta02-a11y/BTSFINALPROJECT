@@ -5,6 +5,7 @@ export interface TranslationKeys {
     home: string;
     about: string;
     services: string;
+    products: string;
     projects: string;
     contact: string;
     whatsapp: string;
@@ -36,12 +37,38 @@ export interface TranslationKeys {
     badge: string;
     title: string;
     description: string;
+    pageTitle: string;
+    pageSubtitle: string;
     items: {
       installation: { title: string; desc: string };
       ducting: { title: string; desc: string };
       maintenance: { title: string; desc: string };
       design: { title: string; desc: string };
+      procurement: { title: string; desc: string };
+      fabrication: { title: string; desc: string };
+      quality: { title: string; desc: string };
     };
+    products: {
+      title: string;
+      subtitle: string;
+      flange: string;
+      valve: string;
+      gasket: string;
+      piping: string;
+      fitting: string;
+      fastener: string;
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+  productsPage: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    ctaLabel: string;
   };
   projects: {
     badge: string;
@@ -100,6 +127,7 @@ export const translations: Record<Language, TranslationKeys> = {
       home: "Home",
       about: "About",
       services: "Services",
+      products: "Products",
       projects: "Projects",
       contact: "Contact",
       whatsapp: "WhatsApp",
@@ -131,6 +159,8 @@ export const translations: Record<Language, TranslationKeys> = {
       badge: "Our Expertise",
       title: "Comprehensive HVAC Solutions",
       description: "We provide end-to-end services from initial design to installation and long-term maintenance, ensuring your facility operates at peak performance.",
+      pageTitle: "Our Services",
+      pageSubtitle: "Comprehensive solutions for your industrial and commercial needs",
       items: {
         installation: {
           title: "Installation",
@@ -147,8 +177,41 @@ export const translations: Record<Language, TranslationKeys> = {
         design: {
           title: "System Design",
           desc: "Professional HVAC engineering and design services tailored to your building's specifications."
+        },
+        procurement: {
+          title: "Procurement & Sourcing",
+          desc: "Reliable sourcing of industrial components including flanges, valves, gaskets, and piping materials with full certification and documentation."
+        },
+        fabrication: {
+          title: "Custom Fabrication",
+          desc: "Precision machining and custom fabrication of flanges, fittings, and industrial components to meet your exact specifications."
+        },
+        quality: {
+          title: "Quality Assurance",
+          desc: "Comprehensive quality control, testing, and certification services ensuring compliance with international standards (ASME, ANSI, API)."
         }
+      },
+      products: {
+        title: "Our Products",
+        subtitle: "High-quality industrial components and materials",
+        flange: "Flanges (Weld Neck, Slip-On, Threaded, Blind)",
+        valve: "Valves (Gate, Ball, Check, Globe)",
+        gasket: "Gaskets (Spiral Wound, PTFE, Rubber)",
+        piping: "Piping & Tubing",
+        fitting: "Pipe Fittings (Elbows, Tees, Reducers)",
+        fastener: "Fasteners (Stud Bolts, Nuts, Washers)"
+      },
+      cta: {
+        title: "Need a Quote?",
+        description: "Contact us today for pricing and availability of our products and services.",
+        button: "Request Quote"
       }
+    },
+    productsPage: {
+      badge: "Our Products",
+      title: "Industrial Components & Materials",
+      subtitle: "Browse our flange, valve, gasket, piping, and fastener selections. Click a product card to order via marketplace.",
+      ctaLabel: "Contact Us"
     },
     projects: {
       badge: "Our Portfolio",
@@ -205,6 +268,7 @@ export const translations: Record<Language, TranslationKeys> = {
       home: "Beranda",
       about: "Tentang Kami",
       services: "Layanan",
+      products: "Produk",
       projects: "Proyek",
       contact: "Kontak",
       whatsapp: "WhatsApp",
@@ -236,6 +300,8 @@ export const translations: Record<Language, TranslationKeys> = {
       badge: "Keahlian Kami",
       title: "Solusi HVAC Komprehensif",
       description: "Kami menyediakan layanan menyeluruh mulai dari desain awal hingga instalasi dan pemeliharaan jangka panjang, memastikan fasilitas Anda beroperasi pada kinerja puncak.",
+      pageTitle: "Layanan Kami",
+      pageSubtitle: "Solusi komprehensif untuk kebutuhan industri dan komersial Anda",
       items: {
         installation: {
           title: "Instalasi",
@@ -252,8 +318,41 @@ export const translations: Record<Language, TranslationKeys> = {
         design: {
           title: "Desain Sistem",
           desc: "Layanan teknik dan desain HVAC profesional yang disesuaikan dengan spesifikasi bangunan Anda."
+        },
+        procurement: {
+          title: "Pengadaan & Sourcing",
+          desc: "Sourcing komponen industri yang andal termasuk flange, valve, gasket, dan material pipa dengan sertifikasi dan dokumentasi lengkap."
+        },
+        fabrication: {
+          title: "Fabrikasi Kustom",
+          desc: "Machining presisi dan fabrikasi kustom flange, fitting, dan komponen industri sesuai spesifikasi Anda."
+        },
+        quality: {
+          title: "Jaminan Kualitas",
+          desc: "Layanan kontrol kualitas, pengujian, dan sertifikasi komprehensif sesuai standar internasional (ASME, ANSI, API)."
         }
+      },
+      products: {
+        title: "Produk Kami",
+        subtitle: "Komponen dan material industri berkualitas tinggi",
+        flange: "Flange (Weld Neck, Slip-On, Threaded, Blind)",
+        valve: "Valve (Gate, Ball, Check, Globe)",
+        gasket: "Gasket (Spiral Wound, PTFE, Karet)",
+        piping: "Pipa & Tubing",
+        fitting: "Pipe Fitting (Elbow, Tee, Reducer)",
+        fastener: "Fastener (Stud Bolt, Nut, Washer)"
+      },
+      cta: {
+        title: "Butuh Penawaran?",
+        description: "Hubungi kami hari ini untuk harga dan ketersediaan produk dan layanan kami.",
+        button: "Request Penawaran"
       }
+    },
+    productsPage: {
+      badge: "Produk Kami",
+      title: "Komponen & Material Industri",
+      subtitle: "Lihat pilihan flange, valve, gasket, pipa, dan fastener kami. Klik kartu produk untuk order via marketplace.",
+      ctaLabel: "Hubungi Kami"
     },
     projects: {
       badge: "Portofolio Kami",

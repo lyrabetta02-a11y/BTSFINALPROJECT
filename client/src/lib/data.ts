@@ -50,7 +50,6 @@ import nir16 from "@assets/generated_images/nir 16.jpeg";
 import nir17 from "@assets/generated_images/nir 17.jpeg";
 import nir18 from "@assets/generated_images/nir 18.jpeg";
 import nir19 from "@assets/generated_images/nir 19.jpeg";
-import nir20 from "@assets/generated_images/nir 20.jpeg";
 
 export const projects = [
   {
@@ -80,7 +79,7 @@ export const projects = [
     title: "PT NIRWANA - Sandwich Panel",
     category: "Sandwich Panel",
     image: nir1,
-    gallery: [nir1, nir2, nir3, nir4, nir5, nir6, nir7, nir8, nir9, nir10, nir11, nir12, nir13, nir14, nir15, nir16, nir17, nir18, nir19, nir20],
+    gallery: [nir1, nir2, nir3, nir4, nir5, nir6, nir7, nir8, nir9, nir10, nir11, nir12, nir13, nir14, nir15, nir16, nir17, nir18, nir19],
     location: "Jakarta",
     year: "2024",
     description:

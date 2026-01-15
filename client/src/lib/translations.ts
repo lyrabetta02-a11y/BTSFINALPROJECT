@@ -164,7 +164,7 @@ export const translations: Record<Language, TranslationKeys> = {
       items: {
         installation: {
           title: "Installation",
-          desc: "Expert installation of Chiller, VRV/VRF, and Split systems for commercial and industrial needs."
+          desc: "Expert installation of Chiller, Sandwich Panel, and Split systems for commercial and industrial needs."
         },
         ducting: {
           title: "Ducting Works",
@@ -221,7 +221,7 @@ export const translations: Record<Language, TranslationKeys> = {
       categories: {
         chiller: "Chiller",
         ducting: "Ducting",
-        vrv: "VRV/VRF",
+        vrv: "Sandwich Panel",
         maintenance: "Maintenance"
       }
     },
@@ -305,7 +305,7 @@ export const translations: Record<Language, TranslationKeys> = {
       items: {
         installation: {
           title: "Instalasi",
-          desc: "Instalasi ahli sistem Chiller, VRV/VRF, dan Split untuk kebutuhan komersial dan industri."
+          desc: "Instalasi ahli sistem Chiller, Sandwich Panel, dan Split untuk kebutuhan komersial dan industri."
         },
         ducting: {
           title: "Pekerjaan Ducting",

@@ -31,6 +31,26 @@ import nf16 from "@assets/generated_images/nf 16.jpg";
 import nf17 from "@assets/generated_images/nf 17.jpg";
 import nf18 from "@assets/generated_images/nf 18.jpg";
 import nf19 from "@assets/generated_images/nf 19.jpg";
+import nir1 from "@assets/generated_images/nir1.jpeg";
+import nir2 from "@assets/generated_images/nir 2.jpeg";
+import nir3 from "@assets/generated_images/nir 3.jpeg";
+import nir4 from "@assets/generated_images/nir 4.jpeg";
+import nir5 from "@assets/generated_images/nir 5.jpeg";
+import nir6 from "@assets/generated_images/nir 6.jpeg";
+import nir7 from "@assets/generated_images/nir 7.jpeg";
+import nir8 from "@assets/generated_images/nir 8.jpeg";
+import nir9 from "@assets/generated_images/nir 9.jpeg";
+import nir10 from "@assets/generated_images/nir 10.jpeg";
+import nir11 from "@assets/generated_images/nir 11.jpeg";
+import nir12 from "@assets/generated_images/nir 12.jpeg";
+import nir13 from "@assets/generated_images/nir 13.jpeg";
+import nir14 from "@assets/generated_images/nir 14.jpeg";
+import nir15 from "@assets/generated_images/nir 15.jpeg";
+import nir16 from "@assets/generated_images/nir 16.jpeg";
+import nir17 from "@assets/generated_images/nir 17.jpeg";
+import nir18 from "@assets/generated_images/nir 18.jpeg";
+import nir19 from "@assets/generated_images/nir 19.jpeg";
+import nir20 from "@assets/generated_images/nir 20.jpeg";
 
 export const projects = [
   {
@@ -57,14 +77,14 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Luxury Mall VRV System",
-    category: "VRV/VRF",
-    image: vrvImage,
-    gallery: [vrvImage],
-    location: "Surabaya",
-    year: "2023",
+    title: "PT NIRWANA - Sandwich Panel",
+    category: "Sandwich Panel",
+    image: nir1,
+    gallery: [nir1, nir2, nir3, nir4, nir5, nir6, nir7, nir8, nir9, nir10, nir11, nir12, nir13, nir14, nir15, nir16, nir17, nir18, nir19, nir20],
+    location: "Jakarta",
+    year: "2024",
     description:
-      "High-efficiency VRV system installation for a premium shopping center.",
+      "Pemasangan sandwich panel untuk PT Nirwana.",
   },
   {
     id: 4,
@@ -79,14 +99,14 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Hotel Resort HVAC",
-    category: "VRV/VRF",
-    image: vrvImage,
-    gallery: [vrvImage],
-    location: "Bali",
-    year: "2022",
+    title: "PT NIRWANA - Sandwich Panel Installation",
+    category: "Sandwich Panel",
+    image: nir10,
+    gallery: [nir10, nir11, nir12, nir13, nir14, nir15],
+    location: "Jakarta",
+    year: "2024",
     description:
-      "Integrated climate control system for a luxury beachside resort.",
+      "Proses instalasi sandwich panel untuk PT Nirwana.",
   },
   {
     id: 6,

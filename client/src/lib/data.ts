@@ -97,17 +97,6 @@ export const projects = [
       "Precision cooling system implementation for a Tier-4 data center.",
   },
   {
-    id: 5,
-    title: "PT NIRWANA - Sandwich Panel Installation",
-    category: "Sandwich Panel",
-    image: nir10,
-    gallery: [nir10, nir11, nir12, nir13, nir14, nir15],
-    location: "Jakarta",
-    year: "2024",
-    description:
-      "Proses instalasi sandwich panel untuk PT Nirwana.",
-  },
-  {
     id: 6,
     title: "PT NATURINDO FRESH",
     category: "HVAC System",

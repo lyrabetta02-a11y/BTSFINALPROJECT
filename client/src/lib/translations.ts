@@ -57,6 +57,10 @@ export interface TranslationKeys {
       piping: string;
       fitting: string;
       fastener: string;
+      buyOnLazada: string;
+      buyOnShopee: string;
+      buyOnTokopedia: string;
+      contactToOrder: string;
     };
     cta: {
       title: string;
@@ -151,7 +155,7 @@ export const translations: Record<Language, TranslationKeys> = {
       points: {
         certified: "Certified HVAC Engineers",
         iso: "ISO 9001 Compliant Processes",
-        experience: "10+ Years of Experience",
+        experience: "5+ Years of Experience",
         support: "24/7 Emergency Support",
       },
     },
@@ -253,12 +257,18 @@ export const translations: Record<Language, TranslationKeys> = {
       quoteBtn: "Get a Quote",
       brochureBtn: "Download Brochure",
     },
+    products: {
+      buyOnLazada: "Buy on Lazada",
+      buyOnShopee: "Buy on Shopee", 
+      buyOnTokopedia: "Buy on Tokopedia",
+      contactToOrder: "Contact to Order"
+    },
     footer: {
       description: "Professional HVAC contractor providing world-class installation, maintenance, and design solutions for commercial and industrial clients.",
       quickLinks: "Quick Links",
       ourServices: "Our Services",
       contactUs: "Contact Us",
-      rights: "© 2025 PT Benua Teknik Solusindo. All rights reserved.",
+      rights: " 2025 PT Benua Teknik Solusindo. All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
     },
@@ -393,6 +403,12 @@ export const translations: Record<Language, TranslationKeys> = {
       description: "Hubungi tim kami hari ini untuk konsultasi dan temukan bagaimana kami dapat memberikan solusi kontrol iklim yang unggul untuk bisnis Anda.",
       quoteBtn: "Dapatkan Penawaran",
       brochureBtn: "Unduh Brosur",
+    },
+    products: {
+      buyOnLazada: "Beli di Lazada",
+      buyOnShopee: "Beli di Shopee", 
+      buyOnTokopedia: "Beli di Tokopedia",
+      contactToOrder: "Hubungi untuk Order"
     },
     footer: {
       description: "Kontraktor HVAC profesional yang menyediakan solusi instalasi, pemeliharaan, dan desain kelas dunia untuk klien komersial dan industri.",

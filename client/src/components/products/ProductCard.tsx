@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Product } from "@/lib/data";
+import { useLanguage } from "@/lib/LanguageContext";
 
 interface ProductCardProps {
   product: Product;
@@ -10,6 +11,8 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, index = 0 }: ProductCardProps) {
+  const { t } = useLanguage();
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -72,7 +75,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
                   size="sm"
                 >
                   <ShoppingCart className="w-4 h-4 mr-2" />
-                  Beli di Lazada
+                  {t("services.products.buyOnLazada")}
                   <ExternalLink className="w-3 h-3 ml-2" />
                 </Button>
               </a>
@@ -90,7 +93,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
                   variant={product.lazadaLink ? "outline" : "default"}
                 >
                   <ShoppingCart className="w-4 h-4 mr-2" />
-                  Beli di Shopee
+                  {t("services.products.buyOnShopee")}
                   <ExternalLink className="w-3 h-3 ml-2" />
                 </Button>
               </a>
@@ -108,7 +111,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
                   variant={(product.lazadaLink || product.shopeeLink) ? "outline" : "default"}
                 >
                   <ShoppingCart className="w-4 h-4 mr-2" />
-                  Beli di Tokopedia
+                  {t("services.products.buyOnTokopedia")}
                   <ExternalLink className="w-3 h-3 ml-2" />
                 </Button>
               </a>
@@ -120,7 +123,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
                 disabled
               >
                 <ShoppingCart className="w-4 h-4 mr-2" />
-                Hubungi untuk Order
+                  {t("services.products.contactToOrder")}
               </Button>
             )}
           </div>

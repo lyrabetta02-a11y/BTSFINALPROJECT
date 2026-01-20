@@ -32,14 +32,25 @@ import nf17 from "@assets/generated_images/nf 17.jpg";
 import nf18 from "@assets/generated_images/nf 18.jpg";
 import nf19 from "@assets/generated_images/nf 19.jpg";
 import klhkII1 from "@assets/generated_images/KLHK II 1.jpg";
+import klhkII2 from "@assets/generated_images/KLHK II 2.jpg";
+import klhkII3 from "@assets/generated_images/KLHK II 3.jpg";
 import klhkII4 from "@assets/generated_images/KLHK II 4.jpg";
+import klhkII5 from "@assets/generated_images/KLHK II 5.jpg";
+import klhkII6 from "@assets/generated_images/KLHK II 6.jpg";
 import klhkII7 from "@assets/generated_images/KLHK II 7.jpg";
+import klhkII8 from "@assets/generated_images/KLHK II 8.jpg";
+import klhkII9 from "@assets/generated_images/KLHK II 9.jpg";
 import klhkII10 from "@assets/generated_images/KLHK II 10.jpg";
+import klhkII11 from "@assets/generated_images/KLHK II 11.jpg";
+import klhkII12 from "@assets/generated_images/KLHK II 12.jpg";
 import klhkII13 from "@assets/generated_images/KLHK II 13.jpg";
+import klhkII14 from "@assets/generated_images/KLHK II 14.jpg";
+import klhkII15 from "@assets/generated_images/KLHK II 15.jpg";
 import klhkII16 from "@assets/generated_images/KLHK II 16.jpg";
+import klhkII17 from "@assets/generated_images/KLHK II 17.jpg";
+import klhkII18 from "@assets/generated_images/KLHK II 18.jpg";
 import klhkII19 from "@assets/generated_images/KLHK II 19.jpg";
-import klhkII22 from "@assets/generated_images/KLHK II 22.jpg";
-import klhkII25 from "@assets/generated_images/KLHK II 25.jpg";
+import klhkII20 from "@assets/generated_images/KLHK II 20.jpg";
 
 export const projects = [
   {
@@ -113,7 +124,7 @@ export const projects = [
     title: "KLHK - Kementerian Lingkungan Hidup dan Kehutanan",
     category: "HVAC System",
     image: klhkII1,
-    gallery: [klhkII1, klhkII4, klhkII7, klhkII10, klhkII13, klhkII16, klhkII19, klhkII22, klhkII25],
+    gallery: [klhkII1, klhkII2, klhkII3, klhkII4, klhkII5, klhkII6, klhkII7, klhkII8, klhkII9, klhkII10, klhkII11, klhkII12, klhkII13, klhkII14, klhkII15, klhkII16, klhkII17, klhkII18, klhkII19, klhkII20],
     location: "Jakarta",
     year: "2024",
     description:

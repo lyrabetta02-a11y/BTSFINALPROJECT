@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import ductingImage from "@assets/generated_images/industrial_hvac_ducting_installation.png";
+import nf9 from "@assets/generated_images/nf 9.jpg";
 import { CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -22,7 +22,7 @@ export default function AboutSection() {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative z-10">
               <img 
-                src={ductingImage} 
+                src={nf9} 
                 alt="HVAC Technician" 
                 className="w-full shadow-2xl rounded-sm"
               />

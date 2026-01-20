@@ -51,6 +51,12 @@ import klhkII17 from "@assets/generated_images/KLHK II 17.jpg";
 import klhkII18 from "@assets/generated_images/KLHK II 18.jpg";
 import klhkII19 from "@assets/generated_images/KLHK II 19.jpg";
 import klhkII20 from "@assets/generated_images/KLHK II 20.jpg";
+import klhkII21 from "@assets/generated_images/KLHK II 21.jpg";
+import klhkII22 from "@assets/generated_images/KLHK II 22.jpg";
+import klhkII23 from "@assets/generated_images/KLHK II 23.jpg";
+import klhkII24 from "@assets/generated_images/KLHK II 24.jpg";
+import klhkII25 from "@assets/generated_images/KLHK II 25.jpg";
+import klhkII26 from "@assets/generated_images/KLHK II 26.jpg";
 
 export const projects = [
   {
@@ -124,7 +130,7 @@ export const projects = [
     title: "KLHK - Kementerian Lingkungan Hidup dan Kehutanan",
     category: "HVAC System",
     image: klhkII1,
-    gallery: [klhkII1, klhkII2, klhkII3, klhkII4, klhkII5, klhkII6, klhkII7, klhkII8, klhkII9, klhkII10, klhkII11, klhkII12, klhkII13, klhkII14, klhkII15, klhkII16, klhkII17, klhkII18, klhkII19, klhkII20],
+    gallery: [klhkII1, klhkII2, klhkII3, klhkII4, klhkII5, klhkII6, klhkII7, klhkII8, klhkII9, klhkII10, klhkII11, klhkII12, klhkII13, klhkII14, klhkII15, klhkII16, klhkII17, klhkII18, klhkII19, klhkII20, klhkII21, klhkII22, klhkII23, klhkII24, klhkII25, klhkII26],
     location: "Jakarta",
     year: "2024",
     description:

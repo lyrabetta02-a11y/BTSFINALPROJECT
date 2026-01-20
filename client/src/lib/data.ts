@@ -31,6 +31,15 @@ import nf16 from "@assets/generated_images/nf 16.jpg";
 import nf17 from "@assets/generated_images/nf 17.jpg";
 import nf18 from "@assets/generated_images/nf 18.jpg";
 import nf19 from "@assets/generated_images/nf 19.jpg";
+import klhkII1 from "@assets/generated_images/KLHK II 1.jpg";
+import klhkII4 from "@assets/generated_images/KLHK II 4.jpg";
+import klhkII7 from "@assets/generated_images/KLHK II 7.jpg";
+import klhkII10 from "@assets/generated_images/KLHK II 10.jpg";
+import klhkII13 from "@assets/generated_images/KLHK II 13.jpg";
+import klhkII16 from "@assets/generated_images/KLHK II 16.jpg";
+import klhkII19 from "@assets/generated_images/KLHK II 19.jpg";
+import klhkII22 from "@assets/generated_images/KLHK II 22.jpg";
+import klhkII25 from "@assets/generated_images/KLHK II 25.jpg";
 
 export const projects = [
   {
@@ -98,6 +107,17 @@ export const projects = [
     year: "2024",
     description:
       "Pemasangan sistem HVAC untuk PT Naturindo Fresh.",
+  },
+  {
+    id: 7,
+    title: "KLHK - Kementerian Lingkungan Hidup dan Kehutanan",
+    category: "HVAC System",
+    image: klhkII1,
+    gallery: [klhkII1, klhkII4, klhkII7, klhkII10, klhkII13, klhkII16, klhkII19, klhkII22, klhkII25],
+    location: "Jakarta",
+    year: "2024",
+    description:
+      "Pemasangan dan pemeliharaan sistem HVAC komprehensif untuk gedung Kementerian Lingkungan Hidup dan Kehutanan.",
   },
 ];
 

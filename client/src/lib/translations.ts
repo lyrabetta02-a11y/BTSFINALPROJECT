@@ -68,6 +68,12 @@ export interface TranslationKeys {
       button: string;
     };
   };
+  products: {
+    buyOnLazada: string;
+    buyOnShopee: string;
+    buyOnTokopedia: string;
+    contactToOrder: string;
+  };
   productsPage: {
     badge: string;
     title: string;

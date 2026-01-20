@@ -175,3 +175,43 @@ export const testimonials = [
       "The VRV system installation was seamless. Their team is highly skilled and responsive.",
   },
 ];
+
+// Products data
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "Flange Weld Neck",
+    category: "Flanges",
+    description: "High-quality weld neck flanges for industrial piping systems",
+    shopeeLink: "https://shopee.com",
+    tokopediaLink: "https://tokopedia.com",
+    lazadaLink: "https://lazada.com"
+  },
+  {
+    id: "2", 
+    name: "Ball Valve",
+    category: "Valves",
+    description: "Durable ball valves for flow control applications",
+    shopeeLink: "https://shopee.com",
+    tokopediaLink: "https://tokopedia.com"
+  },
+  {
+    id: "3",
+    name: "Spiral Wound Gasket",
+    category: "Gaskets", 
+    description: "High-performance spiral wound gaskets for sealing",
+    lazadaLink: "https://lazada.com"
+  },
+  {
+    id: "4",
+    name: "Pipe Fitting Set",
+    category: "Fittings",
+    description: "Complete set of industrial pipe fittings"
+  },
+  {
+    id: "5",
+    name: "Stud Bolt Kit",
+    category: "Fasteners",
+    description: "Industrial stud bolts and nuts kit"
+  }
+];

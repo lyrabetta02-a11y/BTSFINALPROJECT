@@ -203,7 +203,11 @@ export const translations: Record<Language, TranslationKeys> = {
         gasket: "Gaskets (Spiral Wound, PTFE, Rubber)",
         piping: "Piping & Tubing",
         fitting: "Pipe Fittings (Elbows, Tees, Reducers)",
-        fastener: "Fasteners (Stud Bolts, Nuts, Washers)"
+        fastener: "Fasteners (Stud Bolts, Nuts, Washers)",
+        buyOnLazada: "Buy on Lazada",
+        buyOnShopee: "Buy on Shopee",
+        buyOnTokopedia: "Buy on Tokopedia",
+        contactToOrder: "Contact to Order"
       },
       cta: {
         title: "Need a Quote?",
@@ -350,7 +354,11 @@ export const translations: Record<Language, TranslationKeys> = {
         gasket: "Gasket (Spiral Wound, PTFE, Karet)",
         piping: "Pipa & Tubing",
         fitting: "Pipe Fitting (Elbow, Tee, Reducer)",
-        fastener: "Fastener (Stud Bolt, Nut, Washer)"
+        fastener: "Fastener (Stud Bolt, Nut, Washer)",
+        buyOnLazada: "Beli di Lazada",
+        buyOnShopee: "Beli di Shopee",
+        buyOnTokopedia: "Beli di Tokopedia",
+        contactToOrder: "Hubungi untuk Order"
       },
       cta: {
         title: "Butuh Penawaran?",

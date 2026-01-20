@@ -148,6 +148,19 @@ export const services = [
   },
 ];
 
+// Product data with images and marketplace links
+export interface Product {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  image?: string; // Will be imported from assets
+  shopeeLink?: string;
+  tokopediaLink?: string;
+  lazadaLink?: string;
+  price?: string;
+}
+
 export const testimonials = [
   {
     name: "Budi Santoso",

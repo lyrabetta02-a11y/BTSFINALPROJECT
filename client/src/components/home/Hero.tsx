@@ -54,6 +54,22 @@ export default function Hero() {
               </Button>
             </Link>
           </div>
+
+          {/* Trust Badges */}
+          <div className="flex flex-wrap gap-6 mt-8 items-center">
+            <div className="flex items-center gap-2 text-white/80 text-sm">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span>5+ Years Experience</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/80 text-sm">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span>50+ Projects Completed</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/80 text-sm">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span>ISO Certified</span>
+            </div>
+          </div>
         </motion.div>
       </div>
       

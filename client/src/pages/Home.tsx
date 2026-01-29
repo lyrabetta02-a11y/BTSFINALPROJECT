@@ -1,9 +1,12 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ContactInfo from "@/components/layout/ContactInfo";
 import Hero from "@/components/home/Hero";
 import AboutSection from "@/components/home/AboutSection";
 import Services from "@/components/home/Services";
 import ProjectGallery from "@/components/projects/ProjectGallery";
+import TestimonialSection from "@/components/home/TestimonialSection";
+import CTASection from "@/components/home/CTASection";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -17,6 +20,7 @@ export default function Home() {
     <>
       <SEO />
       <div className="min-h-screen bg-background">
+        <ContactInfo />
         <Navbar />
         
         <Hero />
@@ -34,35 +38,21 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">{t("projects.title")}</h2>
             </div>
             <Link href="/projects">
-              <Button variant="ghost" className="text-primary hover:text-accent group">
-                {t("projects.viewAll")} <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white border-none rounded-none h-14 px-8 font-medium">
+                {t("projects.viewAll")}
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
           </div>
-          
-          <ProjectGallery limit={3} />
+          <ProjectGallery />
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">{t("cta.title")}</h2>
-          <p className="text-white/80 max-w-2xl mx-auto mb-10 text-lg">
-            {t("cta.description")}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100 rounded-none h-14 px-8 font-medium">
-                {t("cta.quoteBtn")}
-              </Button>
-            </Link>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-none h-14 px-8 font-medium bg-transparent">
-              {t("cta.brochureBtn")}
-            </Button>
-          </div>
-        </div>
-      </section>
+        {/* Testimonials Section */}
+        <TestimonialSection />
+
+        {/* CTA Section */}
+        <CTASection />
 
       <Footer />
       </div>

@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/lib/LanguageContext";
+import { HelmetProvider } from "react-helmet-async";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Projects from "@/pages/Projects";
@@ -27,14 +28,16 @@ function Router() {
 
 function App() {
   return (
-    <LanguageProvider>
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
-      </QueryClientProvider>
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider>
+        <QueryClientProvider client={queryClient}>
+          <TooltipProvider>
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </QueryClientProvider>
+      </LanguageProvider>
+    </HelmetProvider>
   );
 }
 

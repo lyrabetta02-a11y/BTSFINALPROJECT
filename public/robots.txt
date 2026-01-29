@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://btsfinalproject.vercel.app/sitemap.xml
+
+# Block common non-content paths
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.tsx$
+Disallow: /*.ts$
+Disallow: /assets/

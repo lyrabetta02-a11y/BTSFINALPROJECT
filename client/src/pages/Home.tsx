@@ -4,6 +4,7 @@ import Hero from "@/components/home/Hero";
 import AboutSection from "@/components/home/AboutSection";
 import Services from "@/components/home/Services";
 import ProjectGallery from "@/components/projects/ProjectGallery";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
@@ -13,14 +14,16 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      
-      <Hero />
-      
-      <AboutSection />
-      
-      <Services />
+    <>
+      <SEO />
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        
+        <Hero />
+        
+        <AboutSection />
+        
+        <Services />
 
       {/* Recent Projects Section */}
       <section className="py-24 bg-white">
@@ -62,6 +65,7 @@ export default function Home() {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }

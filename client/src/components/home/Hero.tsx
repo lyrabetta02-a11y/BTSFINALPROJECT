@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import heroImage from "@assets/generated_images/modern_commercial_building_hvac_system_on_roof.png";
+import klhkII2 from "@assets/generated_images/KLHK II 2.jpg";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Hero() {
@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src={klhkII2}
           alt="HVAC Roof System"
           className="w-full h-full object-cover"
         />

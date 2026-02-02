@@ -12,7 +12,6 @@ import klhkImage1 from "@assets/generated_images/IMG-20250312-WA0003.jpg";
 import klhkImage2 from "@assets/generated_images/IMG-20250312-WA0004.jpg";
 import klhkImage3 from "@assets/generated_images/IMG-20250312-WA0011.jpg";
 import grandInna from "@assets/generated_images/grand inna.jpeg";
-import btsLogo from "@assets/generated_images/PT_Benua_Teknik_Solusindo_1765445450532.png";
 import nf1 from "@assets/generated_images/nf 1.jpg";
 import nf2 from "@assets/generated_images/nf 2.jpg";
 import nf3 from "@assets/generated_images/nf 3.jpg";
@@ -32,23 +31,6 @@ import nf16 from "@assets/generated_images/nf 16.jpg";
 import nf17 from "@assets/generated_images/nf 17.jpg";
 import nf18 from "@assets/generated_images/nf 18.jpg";
 import nf19 from "@assets/generated_images/nf 19.jpg";
-import nir2 from "@assets/generated_images/nir 2.jpeg";
-import nir3 from "@assets/generated_images/nir 3.jpeg";
-import nir4 from "@assets/generated_images/nir 4.jpeg";
-import nir5 from "@assets/generated_images/nir 5.jpeg";
-import nir6 from "@assets/generated_images/nir 6.jpeg";
-import nir7 from "@assets/generated_images/nir 7.jpeg";
-import nir8 from "@assets/generated_images/nir 8.jpeg";
-import nir9 from "@assets/generated_images/nir 9.jpeg";
-import nir10 from "@assets/generated_images/nir 10.jpeg";
-import nir11 from "@assets/generated_images/nir 11.jpeg";
-import nir12 from "@assets/generated_images/nir 12.jpeg";
-import nir13 from "@assets/generated_images/nir 13.jpeg";
-import nir14 from "@assets/generated_images/nir 14.jpeg";
-import nir15 from "@assets/generated_images/nir 15.jpeg";
-import nir16 from "@assets/generated_images/nir 16.jpeg";
-import nir17 from "@assets/generated_images/nir 17.jpeg";
-import nir18 from "@assets/generated_images/nir 18.jpeg";
 import klhkII1 from "@assets/generated_images/KLHK II 1.jpg";
 import klhkII2 from "@assets/generated_images/KLHK II 2.jpg";
 import klhkII3 from "@assets/generated_images/KLHK II 3.jpg";
@@ -98,16 +80,6 @@ export const projects = [
     year: "2024",
     description:
       "Pemeliharaan rutin dan servis berkala untuk memastikan sistem HVAC KLHK tetap prima.",
-  },
-  {
-    id: 3,
-    title: "PT NIRWANA - Sandwich Panel",
-    category: "Sandwich Panel",
-    image: btsLogo,
-    gallery: [btsLogo],
-    location: "Jakarta",
-    year: "2024",
-    description: "Pemasangan sandwich panel untuk PT Nirwana.",
   },
   {
     id: 4,

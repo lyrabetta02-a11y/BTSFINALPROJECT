@@ -1,7 +1,17 @@
 {
   "version": 2,
-  "outputDirectory": "dist/public",
+  "outputDirectory": "dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  ],
+  "functions": {},
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "framework": "vite"
 }

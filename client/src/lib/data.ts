@@ -31,7 +31,6 @@ import nf16 from "@assets/generated_images/nf 16.jpg";
 import nf17 from "@assets/generated_images/nf 17.jpg";
 import nf18 from "@assets/generated_images/nf 18.jpg";
 import nf19 from "@assets/generated_images/nf 19.jpg";
-import nir2 from "@assets/generated_images/nir 2.jpeg";
 import nir3 from "@assets/generated_images/nir 3.jpeg";
 import nir4 from "@assets/generated_images/nir 4.jpeg";
 import nir5 from "@assets/generated_images/nir 5.jpeg";
@@ -103,8 +102,8 @@ export const projects = [
     id: 3,
     title: "PT NIRWANA - Sandwich Panel",
     category: "Sandwich Panel",
-    image: nir2,
-    gallery: [nir2, nir3, nir4, nir5, nir6, nir7, nir8, nir9, nir10, nir11, nir12, nir13, nir14, nir15, nir16, nir17, nir18, nir19],
+    image: nir3,
+    gallery: [nir3, nir4, nir5, nir6, nir7, nir8, nir9, nir10, nir11, nir12, nir13, nir14, nir15, nir16, nir17, nir18, nir19],
     location: "Jakarta",
     year: "2024",
     description:

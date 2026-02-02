@@ -100,8 +100,8 @@ export const projects = [
     id: 3,
     title: "PT NIRWANA - Sandwich Panel",
     category: "Sandwich Panel",
-    image: nir5,
-    gallery: [nir5, nir6, nir7, nir8, nir9, nir10, nir11, nir12, nir13, nir14, nir15, nir16, nir17, nir18, nir19],
+    image: nf1,
+    gallery: [nf1, nf2, nf3, nf4, nf5],
     location: "Jakarta",
     year: "2024",
     description:

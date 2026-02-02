@@ -12,6 +12,7 @@ import klhkImage1 from "@assets/generated_images/IMG-20250312-WA0003.jpg";
 import klhkImage2 from "@assets/generated_images/IMG-20250312-WA0004.jpg";
 import klhkImage3 from "@assets/generated_images/IMG-20250312-WA0011.jpg";
 import grandInna from "@assets/generated_images/grand inna.jpeg";
+import btsLogo from "@assets/generated_images/PT_Benua_Teknik_Solusindo_1765445450532.png";
 import nf1 from "@assets/generated_images/nf 1.jpg";
 import nf2 from "@assets/generated_images/nf 2.jpg";
 import nf3 from "@assets/generated_images/nf 3.jpg";
@@ -102,8 +103,8 @@ export const projects = [
     id: 3,
     title: "PT NIRWANA - Sandwich Panel",
     category: "Sandwich Panel",
-    image: nir2,
-    gallery: [nir2, nir3, nir4, nir5, nir6, nir7, nir8, nir9, nir10, nir11, nir12, nir13, nir14, nir15, nir16, nir17, nir18],
+    image: btsLogo,
+    gallery: [btsLogo],
     location: "Jakarta",
     year: "2024",
     description: "Pemasangan sandwich panel untuk PT Nirwana.",

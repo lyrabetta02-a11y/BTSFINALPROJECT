@@ -97,17 +97,6 @@ export const projects = [
       "Pemeliharaan rutin dan servis berkala untuk memastikan sistem HVAC KLHK tetap prima.",
   },
   {
-    id: 3,
-    title: "PT NIRWANA - Sandwich Panel",
-    category: "Sandwich Panel",
-    image: nf1,
-    gallery: [nf1, nf2, nf3, nf4, nf5],
-    location: "Jakarta",
-    year: "2024",
-    description:
-      "Pemasangan sandwich panel untuk PT Nirwana.",
-  },
-  {
     id: 4,
     title: "Luxury Mall VRV System",
     category: "VRV/VRF",

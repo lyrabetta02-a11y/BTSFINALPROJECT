@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pt-benua-tekniksolusindo.surge.sh/sitemap.xml
+
+# Allow sitemap access - Updated 2025-02-09
+Allow: /sitemap.xml
+
+# Explicitly allow all content
+Allow: /*

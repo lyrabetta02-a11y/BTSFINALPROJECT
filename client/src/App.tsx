@@ -19,7 +19,6 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={Home} /> 
       <Route path="/services" component={Services} />
-      <Route path="/products" component={Products} />
       <Route component={NotFound} />
     </Switch>
   );
